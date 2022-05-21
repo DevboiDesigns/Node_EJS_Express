@@ -140,3 +140,10 @@ module.exports = path.dirname(require.main.filename);
 ```js
 <%- include('includes/head.js') %> 
 ```
+
+
+# MVC - Design pattern
+
+* `models` - data 
+* `views` - shown to client
+* `controllers` - routes/ middleware

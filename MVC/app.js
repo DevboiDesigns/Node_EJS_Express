@@ -12,7 +12,7 @@ app.set("view engine", "ejs"); // pug/ ejs - set template engine
 app.set("views", "views"); // defaults to views folder but can set explicitly
 
 // Local files
-const adminData = require("./routes/admin"); // after setting up = const router = express.Router(); & module.exports = router;
+const adminRoutes = require("./routes/admin"); // after setting up = const router = express.Router(); & module.exports = router;
 const shopRoutes = require("./routes/shop");
 
 // Parser
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public"))); // serve up static css etc files - accesible publicly
 
 // Order still matters
-app.use("/admin", adminData.routes); // add a filter to URL
+app.use("/admin", adminRoutes); // add a filter to URL
 app.use(shopRoutes);
 
 // Error Handling with catch all
