@@ -13,16 +13,18 @@ exports.getAddProduct = (req, res, next) => {
 exports.postAddProduct = (req, res, next) => {
   const product = new Product(req.body.title); // Title comes from name in html = <input type="text" name="title" id="title">
   product.save();
-  res.redirect("/"); // redirect to any page
+  res.redirect("/"); 
 };
 
 exports.getProducts = (req, res, next) => {
-  const products = Product.fetchAll();
-  res.render("shop", {
-    prods: products,
-    pageTitle: "Shop",
-    path: "/",
-    hasProducts: true,
-    productCSS: true,
+  Product.fetchAll((products) => {
+    res.render("shop", {
+        prods: products,
+        pageTitle: "Shop",
+        path: "/",
+        hasProducts: true,
+        productCSS: true,
+      });
   });
+  
 };
