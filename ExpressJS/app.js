@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 // Local files
-const adminRoutes = require("./routes/admin");
+const adminRoutes = require("./routes/admin"); // after setting up = const router = express.Router(); & module.exports = router;
 const shopRoutes = require("./routes/shop");
 
 // Parser
