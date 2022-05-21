@@ -11,7 +11,7 @@ const shopRoutes = require("./routes/shop");
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Order still matters
-app.use(adminRoutes);
+app.use('/admin', adminRoutes); // add a filter to URL 
 app.use(shopRoutes);
 
 // Error Handling with catch all
