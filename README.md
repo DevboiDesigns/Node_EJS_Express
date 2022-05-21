@@ -92,3 +92,17 @@ module.exports = path.dirname(require.main.filename);
 
 // points at our directory 
 ```
+
+
+# Templating Engines 
+
+* HTMLish Template 
+* Node/ Express Content 
+* replaces placeholders/ snippets with HTML content 
+* dynamic on the fly HTML file 
+  
+*available*
+1. EJS `npm install --save ejs`
+2. Pug (jade) `npm install --save pug`
+3. Handlebars `npm install --save express-handlebars`
+

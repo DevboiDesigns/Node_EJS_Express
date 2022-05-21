@@ -7,6 +7,10 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+// global config value - set dynamic template engine 
+app.set('view engine', 'pug') // pug - set template engine 
+app.set('views', 'views') // defaults to views folder but can set explicitly 
+
 // Local files
 const adminData = require("./routes/admin"); // after setting up = const router = express.Router(); & module.exports = router;
 const shopRoutes = require("./routes/shop");
