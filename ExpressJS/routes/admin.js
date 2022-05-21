@@ -1,11 +1,11 @@
+const path = require("path");
+
 const express = require("express");
 const router = express.Router();
 
 // is called top to bottom - main should be at bottom
 router.get("/add-product", (req, res, next) => {
-  res.send(
-    '<form action="/admin/add-product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></form>'
-  ); // Sets headers by default
+  res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));
 });
 
 // app.post only fires for "POST" methods

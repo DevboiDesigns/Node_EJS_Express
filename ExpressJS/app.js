@@ -1,3 +1,6 @@
+// Node modules
+const path = require('path')
+
 // Third party modules
 const express = require("express");
 const app = express();
@@ -17,7 +20,7 @@ app.use(shopRoutes);
 // Error Handling with catch all
 app.use((req, res, next) => {
   // set status code to 404 = page not found
-  res.status(404).send("<h1>Page not found</h1>");
+  res.status(404).sendFile(path.join(__dirname, 'views', 'page-not-found.html'));
 });
 
 app.listen(3000);
