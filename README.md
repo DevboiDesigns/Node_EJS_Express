@@ -17,12 +17,25 @@
 6. process.exit - if refs == 0
 
 
-# Errors
+# Setup
 
-* syntax
-* runtime
-* logic 
+* `--save-dev`   - Dev
+* `--save`       - Prod
+
+* `npm init`
+* `npm install nodemon --save-dev`
   
+**set start script**
+`"start": "nodemon app.js"`
+*run with*
+`npm start`
+
+* `npm install express --save`
+* `npm install body-parser --save`
+
+  
+  
+**usage**
 
 ```js
   // Node modules
