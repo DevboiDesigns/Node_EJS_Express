@@ -9,11 +9,12 @@ const app = express();
 
 // global config value - set dynamic template engine
 app.set("view engine", "ejs"); // pug/ ejs - set template engine
-app.set("views", "views"); // defaults to views folder but can set explicitly
+//app.set("views", "views"); // defaults to views folder but can set explicitly
 
 // Local files
 const adminRoutes = require("./routes/admin"); // after setting up = const router = express.Router(); & module.exports = router;
 const shopRoutes = require("./routes/shop");
+const errorsController = require('./controllers/error')
 
 // Parser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,9 +25,6 @@ app.use("/admin", adminRoutes); // add a filter to URL
 app.use(shopRoutes);
 
 // Error Handling with catch all
-app.use((req, res, next) => {
-  // set status code to 404 = page not found
-  res.status(404).render("404", { pageTitle: "Page not found" });
-});
+app.use(errorsController.get404);
 
 app.listen(3000);

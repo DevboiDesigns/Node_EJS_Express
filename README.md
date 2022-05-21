@@ -146,4 +146,4 @@ module.exports = path.dirname(require.main.filename);
 
 * `models` - data 
 * `views` - shown to client
-* `controllers` - routes/ middleware
+* `controllers` - routes/ middleware similar logic 
