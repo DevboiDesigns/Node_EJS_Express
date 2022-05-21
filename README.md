@@ -133,7 +133,7 @@ module.exports = path.dirname(require.main.filename);
 ```
 
 3. 
-* `<%- include('file path') %> ` inject un-escaped HTML code 
+* `<%- include('file path') %>`  inject un-escaped HTML code 
 
 *usage*
 
