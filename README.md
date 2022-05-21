@@ -17,3 +17,9 @@
 6. process.exit - if refs == 0
 
 
+# Errors
+
+* syntax
+* runtime
+* logic 
+  

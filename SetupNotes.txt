@@ -1,0 +1,13 @@
+Node JS 
+
+ 
+- npm init
+- npm install nodemon --Dev
+
+ Packages can be divided into Dev and Prod 
+--save-dev    dev
+--save        prod 
+
+Add script to config nodemon
+"start": "nodemon app.js"
+
