@@ -26,7 +26,7 @@ app.use(shopRoutes);
 // Error Handling with catch all
 app.use((req, res, next) => {
   // set status code to 404 = page not found
-  res.status(404).render("404");
+  res.status(404).render("404", { pageTitle: "Page not found" });
 });
 
 app.listen(3000);

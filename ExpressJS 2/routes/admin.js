@@ -9,7 +9,7 @@ const products = [];
 
 // is called top to bottom - main should be at bottom
 router.get("/add-product", (req, res, next) => {
-  res.render("add-product", { docTitle: "Add Products" });
+  res.render("add-product", { pageTitle: "Add Products", path: '/admin/add-product' });
 });
 
 // app.post only fires for "POST" methods
