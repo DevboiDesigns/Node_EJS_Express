@@ -2,10 +2,10 @@ const fs = require("fs");
 const path = require("path"); // construct path for all operating systems
 
 const p = path.join(
-    path.dirname(require.main.filename),
-    "data",
-    "products.json"
-  );
+  path.dirname(require.main.filename),
+  "data",
+  "products.json"
+);
 
 // helper function
 const getProductsFromFile = (callBack) => {
@@ -19,8 +19,11 @@ const getProductsFromFile = (callBack) => {
 
 // Product Model
 module.exports = class Product {
-  constructor(t) {
-    this.title = t;
+  constructor(title, imageUrl, description, price) {
+    this.title = title;
+    this.imageUrl = imageUrl;
+    this.description = description;
+    this.price = price;
   }
 
   // Save a product
