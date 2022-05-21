@@ -34,7 +34,7 @@
 
 `--save`       - Prod
   
-**usage**
+## Usage
 
 ```js
   // Node modules
@@ -77,9 +77,18 @@ const router = express.Router();
 const rootDir = require('../util/path')
 
 router.get("/", (req, res, next) => {
-    console.log("In the agia middleware!");
     res.sendFile(path.join(rootDir, 'views', 'shop.html'))
   });
 
 module.exports = router;
+```
+
+**helper to point at directory**
+
+```js
+const path = require("path");
+
+module.exports = path.dirname(require.main.filename);
+
+// points at our directory 
 ```
