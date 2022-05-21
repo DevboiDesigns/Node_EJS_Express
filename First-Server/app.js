@@ -1,42 +1,8 @@
 const http = require("http");
-const fs = require("fs");
+// Local
+const routes = require("./routes");
 
-const server = http.createServer((req, res) => {
-  const url = req.url;
-  const method = req.method;
-  // === same type and value
-  if (url === "/") {
-    res.write("<html>");
-    res.write("<head><title>Enter message</title></head>");
-    res.write(
-      '<body><form action="/message" method="POST"><input type="text" name="message"><button type="submit">Send</button></form></body>'
-    );
-    res.write("</html>");
-    return res.end(); // required to exit function
-  }
-  if (url === "/message" && method === "POST") {
-    const body = [];
-    // register an event listener
-    req.on("data", (chunk) => {
-      console.log(chunk);
-      body.push(chunk);
-    });
-    req.on("end", () => {
-      const parsedBody = Buffer.concat(body).toString();
-      const message = parsedBody.split("=")[1];
-      fs.writeFileSync("message.txt", message);
-    });
-
-    res.statusCode = 302; // redirect - send to Location: value
-    res.setHeader("Location", "/");
-    return res.end();
-  }
-  res.setHeader("Content-Type", "text/html");
-  res.write("<html>");
-  res.write("<head><title>My first page</title></head>");
-  res.write("<body><h1>Hello from Node.js</h1></body>");
-  res.write("</html>");
-  res.end();
-});
+console.log(routes.someText);
+const server = http.createServer(routes.handler);
 
 server.listen(3000);
