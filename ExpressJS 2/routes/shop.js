@@ -8,8 +8,13 @@ const adminData = require("./admin");
 
 router.get("/", (req, res, next) => {
   const products = adminData.products;
-  // can pass as many parameters to render - ie. prods, title etc = access in .pug w/ #{docTitle}
-  res.render("shop", { prods: products, pageTitle: "Shop", path: "/" }); //------ render the pug/ template file
+  res.render("shop", { 
+    prods: products, 
+    pageTitle: "Shop", 
+    path: "/",
+    hasProducts: true,
+    productCSS: true 
+  }); 
 });
 
 module.exports = router;

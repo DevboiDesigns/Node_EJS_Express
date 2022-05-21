@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 // global config value - set dynamic template engine
-app.set("view engine", "pug"); // pug - set template engine
+app.set("view engine", "ejs"); // pug/ ejs - set template engine
 app.set("views", "views"); // defaults to views folder but can set explicitly
 
 // Local files

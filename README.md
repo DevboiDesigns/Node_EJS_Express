@@ -106,3 +106,32 @@ module.exports = path.dirname(require.main.filename);
 2. Pug (jade) `npm install --save pug`
 3. Handlebars `npm install --save express-handlebars`
 
+## EJS syntax
+
+* `<%= %>`  renders a variable 
+
+*usage*
+
+```js
+<title><%= pageTitle %></title>
+```
+
+* `<% %>` inject vanilla javascript 
+
+*usage*
+
+```js
+<% for (let product of prods) { %>
+
+// HTML goes here 
+
+ <% } %>
+```
+
+* `<%- include('file path') %> ` inject un-escaped HTML code 
+
+*usage*
+
+```js
+<%- include('includes/head.js') %> 
+```
