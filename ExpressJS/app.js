@@ -15,7 +15,8 @@ app.use("/add-product", (req, res, next) => {
   ); // Sets headers by default
 });
 
-app.use("/product", (req, res, next) => {
+// app.post only fires for "POST" methods 
+app.post("/product", (req, res, next) => {
   console.log(req.body);
   res.redirect("/"); // redirect to any page
 });
