@@ -108,6 +108,9 @@ module.exports = path.dirname(require.main.filename);
 
 ## EJS syntax
 
+*caches data if unchanged*
+
+1. 
 * `<%= %>`  renders a variable 
 
 *usage*
@@ -116,6 +119,7 @@ module.exports = path.dirname(require.main.filename);
 <title><%= pageTitle %></title>
 ```
 
+2. 
 * `<% %>` inject vanilla javascript 
 
 *usage*
@@ -128,6 +132,7 @@ module.exports = path.dirname(require.main.filename);
  <% } %>
 ```
 
+3. 
 * `<%- include('file path') %> ` inject un-escaped HTML code 
 
 *usage*
