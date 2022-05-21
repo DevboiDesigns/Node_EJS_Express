@@ -2,7 +2,7 @@ Node JS
 
  
 - npm init
-- npm install nodemon --Dev
+- npm install nodemon --save-dev
 
  Packages can be divided into Dev and Prod 
 --save-dev    dev
@@ -11,3 +11,5 @@ Node JS
 Add script to config nodemon
 "start": "nodemon app.js"
 
+ - npm install express --save
+ - npm install body-parser --save
