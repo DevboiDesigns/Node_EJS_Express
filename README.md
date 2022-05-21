@@ -19,9 +19,6 @@
 
 # Setup
 
-* `--save-dev`   - Dev
-* `--save`       - Prod
-
 * `npm init`
 * `npm install nodemon --save-dev`
   
@@ -33,7 +30,8 @@
 * `npm install express --save`
 * `npm install body-parser --save`
 
-  
+`--save-dev`   - Dev
+`--save`       - Prod
   
 **usage**
 
