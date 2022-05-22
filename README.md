@@ -147,3 +147,18 @@ module.exports = path.dirname(require.main.filename);
 * `models` - data 
 * `views` - shown to client
 * `controllers` - routes/ middleware similar logic 
+
+# Query Params 
+
+adding a `?` and then `key` = `value` pair - multiple params with `&`
+
+- optional data 
+
+*example*
+
+`?edit=true&title=new`
+
+- check query params in `req.query.<key>` - Express.js
+
+- extracted values are always strings ie. `"true"`
+
