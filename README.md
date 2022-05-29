@@ -163,6 +163,6 @@ adding a `?` and then `key` = `value` pair - multiple params with `&`
 - extracted values are always strings ie. `"true"`
 
 
-## Helpful Code
+# Helpful Code
 
 * `<%= new Date().getFullYear() %>`
