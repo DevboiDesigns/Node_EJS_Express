@@ -5,6 +5,9 @@
 * fs
 * path
 * os
+
+## Helpful links
+* [URL Encoder](https://meyerweb.com/eric/tools/dencoder/)
   
 
 # Single thread, Event Loop & Blocking code
@@ -165,4 +168,32 @@ adding a `?` and then `key` = `value` pair - multiple params with `&`
 
 # Helpful Code
 
+**Set Date to Current date always**
 * `<%= new Date().getFullYear() %>`
+
+**Email Validation Check**
+* `npm install validator`
+
+```js
+ // Validator NPM logic/method
+  if (!validator.isEmail(this.data.email)) {
+    this.errors.push("You must provide a valide email.");
+  }
+```
+
+**TypeOf**
+
+*checks the type of data passed into*
+
+```js
+if (typeof this.data.username != "string") {
+    this.data.username = "";
+  }
+```
+
+**Remove white space**
+
+```js
+// --------------------- .trim = remove white spaces 
+username: this.data.username.trim.toLowerCase()
+```
